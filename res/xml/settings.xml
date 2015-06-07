@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/abc_action_bar_home_description" >
+    <PreferenceCategory android:title="@string/title_settings_sound">
+        <ListPreference
+            android:entryValues="@array/SampleEntries"
+            android:entries="@array/SampleEntries"
+            android:key="@string/key_sample"
+            android:title="@string/title_settings_sound" />
+        
+    </PreferenceCategory>
 
     
 

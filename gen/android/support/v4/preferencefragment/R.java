@@ -136,7 +136,7 @@ public final class R {
 		public static final int abc_split_action_bar_is_narrow = 0x7f070002;
 	}
 	public static final class color {
-		public static final int abc_search_url_text_holo = 0x7f080003;
+		public static final int abc_search_url_text_holo = 0x7f080016;
 		public static final int abc_search_url_text_normal = 0x7f080000;
 		public static final int abc_search_url_text_pressed = 0x7f080002;
 		public static final int abc_search_url_text_selected = 0x7f080001;
@@ -269,9 +269,9 @@ public final class R {
 		public static final int action_mode_close_button = 0x7f060024;
 		public static final int activity_chooser_view_content = 0x7f060025;
 		public static final int always = 0x7f06000b;
-		public static final int back_button = 0x7f06004d;
+		public static final int back_button = 0x7f060050;
 		public static final int beginning = 0x7f060011;
-		public static final int button_bar = 0x7f06004c;
+		public static final int button_bar = 0x7f06004f;
 		public static final int checkbox = 0x7f06002d;
 		public static final int collapseActionView = 0x7f06000d;
 		public static final int default_activity_button = 0x7f060028;
@@ -291,7 +291,7 @@ public final class R {
 		public static final int list_item = 0x7f060029;
 		public static final int middle = 0x7f060012;
 		public static final int never = 0x7f060009;
-		public static final int next_button = 0x7f06004f;
+		public static final int next_button = 0x7f060052;
 		public static final int none = 0x7f060010;
 		public static final int normal = 0x7f060000;
 		public static final int progress_circular = 0x7f060018;
@@ -311,7 +311,7 @@ public final class R {
 		public static final int showCustom = 0x7f060007;
 		public static final int showHome = 0x7f060004;
 		public static final int showTitle = 0x7f060006;
-		public static final int skip_button = 0x7f06004e;
+		public static final int skip_button = 0x7f060051;
 		public static final int split_action_bar = 0x7f06001e;
 		public static final int submit_area = 0x7f060039;
 		public static final int tabMode = 0x7f060002;

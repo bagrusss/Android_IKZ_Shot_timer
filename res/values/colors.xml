@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue_button_focused_color_start">#33FF66</color>
+    <color name="blue_button_focused_color_end">#79C83F</color>
+    <color name="blue_button_normal_color_start">#0085cc</color>
+    <color name="blue_button_normal_color_end">#004bcc</color>
+    <color name="blue_button_pressed_color_start">#4169E0</color>
+    <color name="blue_button_pressed_color_end">#00BFFF</color>
+    
+    
+    <color name="red_button_focused_color_start">#33FF66</color>
+    <color name="red_button_focused_color_end">#79C83F</color>
+    <color name="red_button_normal_color_start">#8B0000</color>
+    <color name="red_button_normal_color_end">#FF0000</color>
+    <color name="red_button_pressed_color_start">#FF0000</color>
+    <color name="red_button_pressed_color_end">#8B0000</color>
+     <color name="red_button_disabled">#8B0000</color>
+    
+    
+    <color name="green_button_focused_color_start">#33FF66</color>
+    <color name="green_button_focused_color_end">#79C83F</color>    
+    <color name="green_button_normal_color_start">#0a9512</color>
+    <color name="green_button_normal_color_end">#0EC518</color>
+    <color name="green_button_pressed_color_start">#0EC518</color>
+    <color name="green_button_pressed_color_end">#0a9512</color>
+    
+    
+    
+
+</resources>
