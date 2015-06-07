@@ -51,7 +51,7 @@
             android:entries="@array/Ex" />
 
         <ImageButton
-            android:id="@+id/buttonInfo"
+            android:id="@+id/infoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="TODO"
@@ -74,7 +74,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/text_number"
-            android:textSize="30sp" />
+            android:textSize="35sp" />
 
         <TextView
             android:id="@+id/TextShotTime"
@@ -84,7 +84,7 @@
             android:gravity="center_horizontal"
             android:text="@string/text_split"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="30sp" />
+            android:textSize="35sp" />
 
         <TextView
             android:id="@+id/TextTime"
@@ -94,7 +94,7 @@
             android:gravity="center_horizontal"
             android:text="@string/text_time"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="30sp" />
+            android:textSize="35sp" />
     </LinearLayout>
 
     <Button

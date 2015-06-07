@@ -11,6 +11,10 @@
     <string name="about_app">This application developed in the framework of bachelor qualification work\n</string>
     <string name="sound_recording">Sound recording</string>
 
+    <!-- Summary -->
+
+    <string name="sample_summary">Sample rate (Hz)</string>
+
     <!-- Default -->
     <string name="def_time_val">00:00.00</string>
     <string name="def_number">10</string>
@@ -27,6 +31,7 @@
 
     <!-- Title -->
     <string name="title_settings_sound">Recording</string>
+    <string name="title_sample">Sample</string>
     <string name="title_activity_navigation">Shot Timer</string>
     <string name="title_section1">Main</string>
     <string name="title_section2">Exercises</string>

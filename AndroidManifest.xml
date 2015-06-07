@@ -16,7 +16,8 @@
 
         <activity
             android:name="ru.vladislavkozhushko.shottimer.NavigationActivity"
-            android:label="@string/title_activity_navigation" >
+            android:label="@string/title_activity_navigation"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

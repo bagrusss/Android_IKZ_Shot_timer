@@ -2,10 +2,9 @@ package ru.vladislavkozhushko.fragments;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
 import org.apache.commons.lang3.time.StopWatch;
-
 import ru.vladislavkozhushko.shottimer.R;
+import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,6 +18,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+@SuppressWarnings("deprecation")
 public class ShotFragment extends Fragment implements OnClickListener {
 
 	private Button mWorkButton, mResetButton;
@@ -72,6 +72,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mWorkButton.setText(getActivity().getString(R.string.text_stop));
 	}
 
+	@SuppressLint("HandlerLeak")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -91,6 +92,12 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mStopWatchText.setTypeface(Typeface.createFromAsset(getActivity()
 				.getAssets(), "digital.ttf"));
 		mWorkButton = (Button) rootView.findViewById(R.id.workButton);
+		((TextView) rootView.findViewById(R.id.TextNumber)).setTypeface(Typeface.createFromAsset(getActivity().getAssets(),
+				"digital.ttf"));
+		((TextView) rootView.findViewById(R.id.TextShotTime)).setTypeface(Typeface.createFromAsset(getActivity().getAssets(),
+				"digital.ttf"));
+		((TextView) rootView.findViewById(R.id.TextTime)).setTypeface(Typeface.createFromAsset(getActivity().getAssets(),
+				"digital.ttf"));
 		mWorkButton.setOnClickListener(this);
 		mResetButton = (Button) rootView.findViewById(R.id.resetButton);
 		mResetButton.setOnClickListener(this);
@@ -115,6 +122,9 @@ public class ShotFragment extends Fragment implements OnClickListener {
 			break;
 		case R.id.resetButton:
 			Reset();
+			break;
+		case R.id.infoButton:
+
 		}
 	}
 }

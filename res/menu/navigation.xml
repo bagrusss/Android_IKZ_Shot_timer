@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.shottimer.NavigationActivity" >
 
+    <!--
+
     <item
         android:id="@+id/action_example"
         android:title="@string/action_example"
-        app:showAsAction="withText|ifRoom"/>
+        app:showAsAction="withText|ifRoom"/>
+    -->
 
 </menu>

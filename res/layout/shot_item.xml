@@ -35,5 +35,6 @@
         android:text="@string/def_time"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="35sp" />
+    
 
 </LinearLayout>

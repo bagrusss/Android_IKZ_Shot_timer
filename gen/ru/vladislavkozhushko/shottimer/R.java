@@ -1149,7 +1149,6 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f060023;
         public static final int action_bar_title=0x7f060022;
         public static final int action_context_bar=0x7f06001d;
-        public static final int action_example=0x7f060054;
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
@@ -1158,7 +1157,6 @@ containing a value of this type.
         public static final int always=0x7f06000b;
         public static final int back_button=0x7f060050;
         public static final int beginning=0x7f060011;
-        public static final int buttonInfo=0x7f060049;
         public static final int button_bar=0x7f06004f;
         public static final int checkbox=0x7f06002d;
         public static final int collapseActionView=0x7f06000d;
@@ -1178,6 +1176,7 @@ containing a value of this type.
         public static final int ifRoom=0x7f06000a;
         public static final int image=0x7f060027;
         public static final int imageView1=0x7f060040;
+        public static final int infoButton=0x7f060049;
         public static final int listMode=0x7f060001;
         public static final int listView1=0x7f060043;
         public static final int list_item=0x7f060029;
@@ -1338,39 +1337,43 @@ containing a value of this type.
         /**   Strings for possible PreferenceActivity Back/Next buttons 
          */
         public static final int back_button_label=0x7f0b000d;
-        public static final int def_number=0x7f0b001a;
-        public static final int def_shottime=0x7f0b001b;
-        public static final int def_time=0x7f0b001c;
+        public static final int def_number=0x7f0b001b;
+        public static final int def_shottime=0x7f0b001c;
+        public static final int def_time=0x7f0b001d;
         /**  Default 
          */
-        public static final int def_time_val=0x7f0b0019;
+        public static final int def_time_val=0x7f0b001a;
         public static final int hello_world=0x7f0b0011;
         /**  Preference keys 
          */
-        public static final int key_sample=0x7f0b0029;
+        public static final int key_sample=0x7f0b002b;
         public static final int navigation_drawer_close=0x7f0b0014;
         public static final int navigation_drawer_open=0x7f0b0013;
         public static final int next_button_label=0x7f0b000e;
+        /**  Summary 
+         */
+        public static final int sample_summary=0x7f0b0019;
         /**  Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] 
          */
         public static final int skip_button_label=0x7f0b000f;
         public static final int sound_recording=0x7f0b0018;
-        public static final int text_number=0x7f0b0021;
-        public static final int text_reset=0x7f0b001f;
-        public static final int text_split=0x7f0b0022;
+        public static final int text_number=0x7f0b0022;
+        public static final int text_reset=0x7f0b0020;
+        public static final int text_split=0x7f0b0023;
         /**  Text_ 
          */
-        public static final int text_start=0x7f0b001d;
-        public static final int text_stop=0x7f0b001e;
-        public static final int text_time=0x7f0b0020;
-        public static final int title_activity_navigation=0x7f0b0024;
-        public static final int title_section1=0x7f0b0025;
-        public static final int title_section2=0x7f0b0026;
-        public static final int title_section3=0x7f0b0027;
-        public static final int title_section4=0x7f0b0028;
+        public static final int text_start=0x7f0b001e;
+        public static final int text_stop=0x7f0b001f;
+        public static final int text_time=0x7f0b0021;
+        public static final int title_activity_navigation=0x7f0b0026;
+        public static final int title_sample=0x7f0b0025;
+        public static final int title_section1=0x7f0b0027;
+        public static final int title_section2=0x7f0b0028;
+        public static final int title_section3=0x7f0b0029;
+        public static final int title_section4=0x7f0b002a;
         /**  Title 
          */
-        public static final int title_settings_sound=0x7f0b0023;
+        public static final int title_settings_sound=0x7f0b0024;
     }
     public static final class style {
         /** 
