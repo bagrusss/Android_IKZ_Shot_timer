@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shot Timer (IKZ)</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Настройки</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_section1">Главная</string>
+    <string name="title_section2">Упражнения</string>
+    <string name="title_section3">Настройки</string>
+    <string name="title_section4">О приложении</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Пример действия</string>
+    <string name="about_developer">© Кожушко Владислав\n\nИУ6&#8211;83</string>
+    <string name="about_app">Приложение разработано в рамках бакалаврской квалификационной работы\n</string>
+
+</resources>

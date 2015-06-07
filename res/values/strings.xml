@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shot Timer (IKZ)</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_navigation">Shot Timer</string>
+    <string name="title_section1">Main</string>
+    <string name="title_section2">Exercises</string>
+    <string name="title_section3">Settings</string>
+    <string name="title_section4">About App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="about_developer">© Vladislav Kozhushko\n\nIU6&#8211;83</string>
+    <string name="about_app">This application developed in the framework of bachelor qualification work\n</string>
+    <string name="text_time">Time</string>
+    <string name="def_time_val">00:00.00</string>
+    <string name="text_start">START</string>
+    <string name="text_stop">STOP</string>
+    <string name="sound_recording">Sound recording</string>
+    <string name="def_number">10</string>
+    <string name="def_shottime">1.02</string>
+    <string name="def_time">11.53</string>
+
+    <string-array name="Ex">
+        <item>First shot</item>
+        <item>Infinity</item>
+        <item>Interval</item>
+    </string-array>
+
+</resources>
