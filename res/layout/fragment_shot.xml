@@ -54,10 +54,20 @@
             android:id="@+id/infoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/todo"
             android:scaleType="fitCenter"
             android:src="@android:drawable/ic_dialog_info" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/workButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/green_btn_selector"
+        android:text="@string/text_start"
+        android:textColor="@android:color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -96,16 +106,6 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="35sp" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/workButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/green_btn_selector"
-        android:text="@string/text_start"
-        android:textColor="@android:color/white" />
 
     <ListView
         android:id="@+id/shotsList"

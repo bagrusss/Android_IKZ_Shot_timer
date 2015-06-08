@@ -67,6 +67,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		}, 0, 10);
 		state = 2;
 		mSpinner.setEnabled(false);
+		mResetButton.setEnabled(false);
 		mWorkButton.setBackgroundDrawable(getActivity().getResources()
 				.getDrawable(R.drawable.red_btn_selector));
 		mWorkButton.setText(getActivity().getString(R.string.text_stop));

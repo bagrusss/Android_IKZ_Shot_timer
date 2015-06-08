@@ -10,6 +10,7 @@
     <string name="about_developer">© Vladislav Kozhushko\n\nIU6&#8211;83</string>
     <string name="about_app">This application developed in the framework of bachelor qualification work\n</string>
     <string name="sound_recording">Sound recording</string>
+    <string name="todo">TODO</string>
 
     <!-- Summary -->
 
@@ -52,5 +53,6 @@
         <item>16000</item>
         <item>8000</item>
     </string-array>
+
 
 </resources>

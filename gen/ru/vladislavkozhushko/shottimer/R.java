@@ -1136,9 +1136,9 @@ containing a value of this type.
         public static final int EX_spinner=0x7f060048;
         public static final int LinearLayoutMain=0x7f060045;
         public static final int ScrollView1=0x7f06003f;
-        public static final int TextNumber=0x7f06004a;
-        public static final int TextShotTime=0x7f06004b;
-        public static final int TextTime=0x7f06004c;
+        public static final int TextNumber=0x7f06004b;
+        public static final int TextShotTime=0x7f06004c;
+        public static final int TextTime=0x7f06004d;
         public static final int aboutApp=0x7f060041;
         public static final int aboutDev=0x7f060042;
         public static final int action_bar=0x7f06001c;
@@ -1216,7 +1216,7 @@ containing a value of this type.
         public static final int up=0x7f060021;
         public static final int useLogo=0x7f060003;
         public static final int withText=0x7f06000c;
-        public static final int workButton=0x7f06004d;
+        public static final int workButton=0x7f06004a;
     }
     public static final class integer {
         /**  The maximum number of action buttons that should be permitted within
@@ -1337,43 +1337,44 @@ containing a value of this type.
         /**   Strings for possible PreferenceActivity Back/Next buttons 
          */
         public static final int back_button_label=0x7f0b000d;
-        public static final int def_number=0x7f0b001b;
-        public static final int def_shottime=0x7f0b001c;
-        public static final int def_time=0x7f0b001d;
+        public static final int def_number=0x7f0b001c;
+        public static final int def_shottime=0x7f0b001d;
+        public static final int def_time=0x7f0b001e;
         /**  Default 
          */
-        public static final int def_time_val=0x7f0b001a;
+        public static final int def_time_val=0x7f0b001b;
         public static final int hello_world=0x7f0b0011;
         /**  Preference keys 
          */
-        public static final int key_sample=0x7f0b002b;
+        public static final int key_sample=0x7f0b002c;
         public static final int navigation_drawer_close=0x7f0b0014;
         public static final int navigation_drawer_open=0x7f0b0013;
         public static final int next_button_label=0x7f0b000e;
         /**  Summary 
          */
-        public static final int sample_summary=0x7f0b0019;
+        public static final int sample_summary=0x7f0b001a;
         /**  Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] 
          */
         public static final int skip_button_label=0x7f0b000f;
         public static final int sound_recording=0x7f0b0018;
-        public static final int text_number=0x7f0b0022;
-        public static final int text_reset=0x7f0b0020;
-        public static final int text_split=0x7f0b0023;
+        public static final int text_number=0x7f0b0023;
+        public static final int text_reset=0x7f0b0021;
+        public static final int text_split=0x7f0b0024;
         /**  Text_ 
          */
-        public static final int text_start=0x7f0b001e;
-        public static final int text_stop=0x7f0b001f;
-        public static final int text_time=0x7f0b0021;
-        public static final int title_activity_navigation=0x7f0b0026;
-        public static final int title_sample=0x7f0b0025;
-        public static final int title_section1=0x7f0b0027;
-        public static final int title_section2=0x7f0b0028;
-        public static final int title_section3=0x7f0b0029;
-        public static final int title_section4=0x7f0b002a;
+        public static final int text_start=0x7f0b001f;
+        public static final int text_stop=0x7f0b0020;
+        public static final int text_time=0x7f0b0022;
+        public static final int title_activity_navigation=0x7f0b0027;
+        public static final int title_sample=0x7f0b0026;
+        public static final int title_section1=0x7f0b0028;
+        public static final int title_section2=0x7f0b0029;
+        public static final int title_section3=0x7f0b002a;
+        public static final int title_section4=0x7f0b002b;
         /**  Title 
          */
-        public static final int title_settings_sound=0x7f0b0024;
+        public static final int title_settings_sound=0x7f0b0025;
+        public static final int todo=0x7f0b0019;
     }
     public static final class style {
         /** 
