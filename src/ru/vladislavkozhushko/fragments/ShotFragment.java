@@ -10,7 +10,9 @@ import ru.vladislavkozhushko.shottimer.R;
 import ru.vladislavkozhushko.shottimer.Shot;
 import ru.vladislavkozhushko.shottimer.ShotListAdapter;
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -24,6 +26,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 @SuppressWarnings("deprecation")
 public class ShotFragment extends Fragment implements OnClickListener {
 
@@ -56,8 +59,13 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mStopWatch.suspend();
 		mTimer.cancel();
 		state = 1;
-		mWorkButton.setBackgroundDrawable(getActivity().getResources()
-				.getDrawable(R.drawable.green_btn_selector));
+		if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+			mWorkButton.setBackgroundDrawable(getActivity().getResources()
+					.getDrawable(R.drawable.green_btn_selector));
+		} else {
+			mWorkButton.setBackground(getActivity().getResources().getDrawable(
+					R.drawable.green_btn_selector));
+		}
 		mWorkButton.setText(getActivity().getString(R.string.text_start));
 		mSpinner.setEnabled(true);
 		mResetButton.setEnabled(true);
@@ -69,8 +77,8 @@ public class ShotFragment extends Fragment implements OnClickListener {
 			mStopWatch.resume();
 		else
 			mStopWatch.start();
-		if (mShots==null){
-			mShots=new LinkedList<>();
+		if (mShots == null) {
+			mShots = new LinkedList<>();
 		}
 		mTimer = new Timer();
 		mTimer.schedule(new TimerTask() {
@@ -82,8 +90,14 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		state = 2;
 		mSpinner.setEnabled(false);
 		mResetButton.setEnabled(false);
-		mWorkButton.setBackgroundDrawable(getActivity().getResources()
-				.getDrawable(R.drawable.red_btn_selector));
+		if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+			mWorkButton.setBackgroundDrawable(getActivity().getResources()
+					.getDrawable(R.drawable.red_btn_selector));
+		} else {
+			mWorkButton.setBackground(getActivity().getResources().getDrawable(
+					R.drawable.red_btn_selector));
+		}
+
 		mWorkButton.setText(getActivity().getString(R.string.text_stop));
 	}
 
@@ -92,11 +106,11 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		mStopWatch = new StopWatch();
-		mShots=new LinkedList<Shot>();
+		mShots = new LinkedList<Shot>();
 		mShots.add(new Shot(1, "00.00", "01.03"));
 		mShots.add(new Shot(2, "01.00", "02.03"));
 		mShots.add(new Shot(3, "00.56", "02.59"));
-		mShotListAdapter=new ShotListAdapter(getActivity(), mShots);
+		mShotListAdapter = new ShotListAdapter(getActivity(), mShots);
 		mHandler = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
@@ -112,13 +126,15 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mStopWatchText.setTypeface(Typeface.createFromAsset(getActivity()
 				.getAssets(), "digital.ttf"));
 		mWorkButton = (Button) rootView.findViewById(R.id.workButton);
-		((TextView) rootView.findViewById(R.id.TextNumber)).setTypeface(Typeface.createFromAsset(getActivity().getAssets(),
-				"digital.ttf"));
-		((TextView) rootView.findViewById(R.id.TextShotTime)).setTypeface(Typeface.createFromAsset(getActivity().getAssets(),
-				"digital.ttf"));
-		((TextView) rootView.findViewById(R.id.TextTime)).setTypeface(Typeface.createFromAsset(getActivity().getAssets(),
-				"digital.ttf"));
-		mListView=(ListView) rootView.findViewById(R.id.shotsList);
+		((TextView) rootView.findViewById(R.id.TextNumber))
+				.setTypeface(Typeface.createFromAsset(
+						getActivity().getAssets(), "digital.ttf"));
+		((TextView) rootView.findViewById(R.id.TextShotTime))
+				.setTypeface(Typeface.createFromAsset(
+						getActivity().getAssets(), "digital.ttf"));
+		((TextView) rootView.findViewById(R.id.TextTime)).setTypeface(Typeface
+				.createFromAsset(getActivity().getAssets(), "digital.ttf"));
+		mListView = (ListView) rootView.findViewById(R.id.shotsList);
 		mListView.setAdapter(mShotListAdapter);
 		mWorkButton.setOnClickListener(this);
 		mResetButton = (Button) rootView.findViewById(R.id.resetButton);
@@ -130,7 +146,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onDestroy() {
 		mStopWatch = null;
-		mShots=null;
+		mShots = null;
 		super.onDestroy();
 	}
 

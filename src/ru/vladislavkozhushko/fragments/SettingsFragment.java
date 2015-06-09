@@ -7,6 +7,7 @@ import android.support.v4.preference.PreferenceFragment;
 
 public class SettingsFragment extends PreferenceFragment {
 	
+
 	@Override
 	public void onCreate(Bundle paramBundle) {
 		super.onCreate(paramBundle);
@@ -22,7 +23,7 @@ public class SettingsFragment extends PreferenceFragment {
 	}
 	
 	public SettingsFragment() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }
