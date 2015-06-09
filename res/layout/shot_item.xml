@@ -4,37 +4,45 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="5dp"
     android:layout_marginTop="2dp"
-    android:orientation="horizontal"
-    android:gravity="center_vertical" >
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/TextNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_horizontal"
         android:text="@string/def_number"
         android:textSize="40sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/TextShotTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_horizontal"
         android:text="@string/def_shottime"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="35sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/TextTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_weight="1"
         android:text="@string/def_time"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="35sp" />
-    
 
 </LinearLayout>

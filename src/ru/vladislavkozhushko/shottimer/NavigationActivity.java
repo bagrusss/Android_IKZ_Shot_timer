@@ -68,6 +68,8 @@ public class NavigationActivity extends ActionBarActivity implements
 			fragmentManager.beginTransaction()
 					.replace(R.id.container, new AboutFragment()).commit();
 			break;
+		case 4:
+			finish();
 		}
 	}
 

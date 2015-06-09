@@ -105,6 +105,7 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section2),
                         getString(R.string.title_section3),
                         getString(R.string.title_section4),
+                        getString(R.string.title_section5),
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
@@ -147,7 +148,6 @@ public class NavigationDrawerFragment extends Fragment {
                 if (!isAdded()) {
                     return;
                 }
-
                 getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
             }
 
@@ -157,7 +157,6 @@ public class NavigationDrawerFragment extends Fragment {
                 if (!isAdded()) {
                     return;
                 }
-
                 if (!mUserLearnedDrawer) {
                     // The user manually opened the drawer; store this flag to prevent auto-showing
                     // the navigation drawer automatically in the future.
@@ -166,7 +165,6 @@ public class NavigationDrawerFragment extends Fragment {
                             .getDefaultSharedPreferences(getActivity());
                     sp.edit().putBoolean(PREF_USER_LEARNED_DRAWER, true).apply();
                 }
-
                 getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
             }
         };

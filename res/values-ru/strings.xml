@@ -5,10 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Настройки</string>
     <string name="title_activity_navigation">Стрелковый таймер</string>
-    <string name="title_section1">Главная</string>
+    <string name="title_section1">Стрельба</string>
     <string name="title_section2">Упражнения</string>
     <string name="title_section3">Настройки</string>
     <string name="title_section4">О приложении</string>
+    <string name="title_section5">Выход</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Пример действия</string>

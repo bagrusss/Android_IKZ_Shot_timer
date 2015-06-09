@@ -29,6 +29,9 @@
     <string name="text_time">Time</string>
     <string name="text_number">#</string>
     <string name="text_split">Split</string>
+    <string name="text_name">Name</string>
+    <string name="text_description">Description</string>
+    <string name="text_timelimit">Time Limit</string>
 
     <!-- Title -->
     <string name="title_settings_sound">Recording</string>
@@ -38,6 +41,8 @@
     <string name="title_section2">Exercises</string>
     <string name="title_section3">Settings</string>
     <string name="title_section4">About App</string>
+    <string name="title_section5">Exit</string>
+    <string name="title_activity_edit_ex">Edit Exercise</string>
 
     <!-- Preference keys -->
     <string name="key_sample">sample</string>
@@ -49,10 +54,10 @@
         <item>Interval</item>
     </string-array>
     <string-array name="SampleEntries">
+        <item>44100</item>
         <item>22050</item>
         <item>16000</item>
         <item>8000</item>
     </string-array>
-
 
 </resources>

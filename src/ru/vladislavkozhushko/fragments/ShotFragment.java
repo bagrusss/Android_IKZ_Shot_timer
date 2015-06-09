@@ -1,9 +1,14 @@
 package ru.vladislavkozhushko.fragments;
 
+import java.util.LinkedList;
 import java.util.Timer;
 import java.util.TimerTask;
+
 import org.apache.commons.lang3.time.StopWatch;
+
 import ru.vladislavkozhushko.shottimer.R;
+import ru.vladislavkozhushko.shottimer.Shot;
+import ru.vladislavkozhushko.shottimer.ShotListAdapter;
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -15,6 +20,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -24,6 +30,9 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	private Button mWorkButton, mResetButton;
 	private TextView mStopWatchText;
 	private Spinner mSpinner;
+	private ListView mListView;
+	private ShotListAdapter mShotListAdapter;
+	private LinkedList<Shot> mShots;
 
 	private byte state = 0;
 	private Timer mTimer;
@@ -35,6 +44,8 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	}
 
 	private void Reset() {
+		mShots.clear();
+		mShotListAdapter.notifyDataSetChanged();
 		mStopWatch.reset();
 		state = 0;
 		mResetButton.setEnabled(false);
@@ -58,6 +69,9 @@ public class ShotFragment extends Fragment implements OnClickListener {
 			mStopWatch.resume();
 		else
 			mStopWatch.start();
+		if (mShots==null){
+			mShots=new LinkedList<>();
+		}
 		mTimer = new Timer();
 		mTimer.schedule(new TimerTask() {
 			@Override
@@ -78,6 +92,11 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		mStopWatch = new StopWatch();
+		mShots=new LinkedList<Shot>();
+		mShots.add(new Shot(1, "00.00", "01.03"));
+		mShots.add(new Shot(2, "01.00", "02.03"));
+		mShots.add(new Shot(3, "00.56", "02.59"));
+		mShotListAdapter=new ShotListAdapter(getActivity(), mShots);
 		mHandler = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
@@ -99,6 +118,8 @@ public class ShotFragment extends Fragment implements OnClickListener {
 				"digital.ttf"));
 		((TextView) rootView.findViewById(R.id.TextTime)).setTypeface(Typeface.createFromAsset(getActivity().getAssets(),
 				"digital.ttf"));
+		mListView=(ListView) rootView.findViewById(R.id.shotsList);
+		mListView.setAdapter(mShotListAdapter);
 		mWorkButton.setOnClickListener(this);
 		mResetButton = (Button) rootView.findViewById(R.id.resetButton);
 		mResetButton.setOnClickListener(this);
@@ -109,6 +130,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onDestroy() {
 		mStopWatch = null;
+		mShots=null;
 		super.onDestroy();
 	}
 
