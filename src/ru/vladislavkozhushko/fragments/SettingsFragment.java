@@ -17,7 +17,6 @@ public class SettingsFragment extends PreferenceFragment {
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
 		getListView().setPadding(0, 0, 0, 0);
 	}
