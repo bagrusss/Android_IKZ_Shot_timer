@@ -1,6 +1,7 @@
 package ru.vladislavkozhushko.fragments;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -35,7 +36,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	private Spinner mSpinner;
 	private ListView mListView;
 	private ShotListAdapter mShotListAdapter;
-	private LinkedList<Shot> mShots;
+	private List<Shot> mShots;
 
 	private byte state = 0;
 	private Timer mTimer;
@@ -80,7 +81,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		if (mShots == null) {
 			mShots = new LinkedList<>();
 		}
-		mTimer = new Timer();
+		
 		mTimer.schedule(new TimerTask() {
 			@Override
 			public void run() {
@@ -106,6 +107,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		mStopWatch = new StopWatch();
+		mTimer = new Timer();
 		mShots = new LinkedList<Shot>();
 		mShots.add(new Shot(1, "00.00", "01.03"));
 		mShots.add(new Shot(2, "01.00", "02.03"));
@@ -145,9 +147,11 @@ public class ShotFragment extends Fragment implements OnClickListener {
 
 	@Override
 	public void onDestroy() {
-		mStopWatch = null;
-		mShots = null;
 		super.onDestroy();
+		mTimer.cancel();
+		mTimer=null;
+		mShots = null;
+		//mStopWatch = null;
 	}
 
 	@Override

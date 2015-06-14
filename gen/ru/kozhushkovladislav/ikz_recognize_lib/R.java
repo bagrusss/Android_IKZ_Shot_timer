@@ -254,7 +254,7 @@ public final class R {
 		public static final int abc_textfield_searchview_holo_light = 0x7f020054;
 		public static final int abc_textfield_searchview_right_holo_dark = 0x7f020055;
 		public static final int abc_textfield_searchview_right_holo_light = 0x7f020056;
-		public static final int ic_launcher = 0x7f02005f;
+		public static final int ic_launcher = 0x7f020061;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f06001c;
@@ -268,7 +268,7 @@ public final class R {
 		public static final int action_menu_divider = 0x7f060016;
 		public static final int action_menu_presenter = 0x7f060017;
 		public static final int action_mode_close_button = 0x7f060024;
-		public static final int action_settings = 0x7f060061;
+		public static final int action_settings = 0x7f060066;
 		public static final int activity_chooser_view_content = 0x7f060025;
 		public static final int always = 0x7f06000b;
 		public static final int beginning = 0x7f060011;
@@ -350,10 +350,10 @@ public final class R {
 		public static final int abc_simple_decor = 0x7f030017;
 		public static final int activity_main = 0x7f030019;
 		public static final int fragment_main = 0x7f03001f;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030025;
+		public static final int support_simple_spinner_dropdown_item = 0x7f030026;
 	}
 	public static final class menu {
-		public static final int main = 0x7f0e0002;
+		public static final int main = 0x7f0e0003;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f0b0001;

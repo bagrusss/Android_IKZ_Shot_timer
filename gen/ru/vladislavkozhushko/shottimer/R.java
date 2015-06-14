@@ -18,6 +18,7 @@ public final class R {
     }
     public static final class array {
         /**  Arrays 
+ Arrays 
          */
         public static final int Ex=0x7f0d0000;
         public static final int Method=0x7f0d0002;
@@ -1142,29 +1143,33 @@ containing a value of this type.
         public static final int green_button_focused=0x7f02005a;
         public static final int green_button_normal=0x7f02005b;
         public static final int green_button_pressed=0x7f02005c;
-        public static final int ic_drawer=0x7f02005d;
-        public static final int ic_galka=0x7f02005e;
-        public static final int ic_launcher=0x7f02005f;
-        public static final int ic_time=0x7f020060;
-        public static final int ic_timelimit=0x7f020061;
-        public static final int ic_warn=0x7f020062;
-        public static final int red_btn_disabled=0x7f020063;
-        public static final int red_btn_selector=0x7f020064;
-        public static final int red_button_focused=0x7f020065;
-        public static final int red_button_normal=0x7f020066;
-        public static final int red_button_pressed=0x7f020067;
+        public static final int ic_add=0x7f02005d;
+        public static final int ic_drawer=0x7f02005e;
+        public static final int ic_galka=0x7f02005f;
+        public static final int ic_info=0x7f020060;
+        public static final int ic_launcher=0x7f020061;
+        public static final int ic_time=0x7f020062;
+        public static final int ic_timelimit=0x7f020063;
+        public static final int ic_warn=0x7f020064;
+        public static final int red_btn_disabled=0x7f020065;
+        public static final int red_btn_selector=0x7f020066;
+        public static final int red_button_focused=0x7f020067;
+        public static final int red_button_normal=0x7f020068;
+        public static final int red_button_pressed=0x7f020069;
     }
     public static final class id {
-        public static final int CallMe=0x7f060047;
-        public static final int EX_spinner=0x7f060056;
-        public static final int ExListView=0x7f060051;
-        public static final int LinearLayoutMain=0x7f060053;
-        public static final int ScrollView1=0x7f06004d;
-        public static final int TextNumber=0x7f060059;
-        public static final int TextShotTime=0x7f06005a;
-        public static final int TextTime=0x7f06005b;
-        public static final int aboutApp=0x7f06004f;
-        public static final int aboutDev=0x7f060050;
+        public static final int CallMe=0x7f06004b;
+        public static final int EX_spinner=0x7f06005a;
+        public static final int ExListView=0x7f060055;
+        public static final int LinearLayoutMain=0x7f060057;
+        public static final int RelativeLayout1=0x7f06003f;
+        public static final int RelativeLayout2=0x7f060042;
+        public static final int ScrollView1=0x7f060051;
+        public static final int TextNumber=0x7f06005d;
+        public static final int TextShotTime=0x7f06005e;
+        public static final int TextTime=0x7f06005f;
+        public static final int aboutApp=0x7f060053;
+        public static final int aboutDev=0x7f060054;
         public static final int action_bar=0x7f06001c;
         public static final int action_bar_activity_content=0x7f060015;
         public static final int action_bar_container=0x7f06001b;
@@ -1176,21 +1181,22 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
-        public static final int action_settings=0x7f060061;
+        public static final int action_settings=0x7f060066;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
-        public static final int back_button=0x7f06005e;
+        public static final int back_button=0x7f060063;
         public static final int beginning=0x7f060011;
-        public static final int button_bar=0x7f06005d;
-        public static final int checkBoxTimeLimit=0x7f060040;
+        public static final int button_bar=0x7f060062;
+        public static final int checkBoxCountLimit=0x7f060040;
+        public static final int checkBoxTimeLimit=0x7f060043;
         public static final int checkbox=0x7f06002d;
         public static final int collapseActionView=0x7f06000d;
         public static final int container=0x7f06003c;
-        public static final int current_value=0x7f060043;
+        public static final int current_value=0x7f060047;
         public static final int default_activity_button=0x7f060028;
         public static final int dialog=0x7f06000e;
         public static final int disableHome=0x7f060008;
-        public static final int drawer_layout=0x7f060041;
+        public static final int drawer_layout=0x7f060045;
         public static final int dropdown=0x7f06000f;
         public static final int editExName=0x7f06003d;
         public static final int editText1=0x7f06003e;
@@ -1203,25 +1209,28 @@ containing a value of this type.
         public static final int icon=0x7f06002a;
         public static final int ifRoom=0x7f06000a;
         public static final int image=0x7f060027;
-        public static final int imageCountLimit=0x7f060049;
-        public static final int imageEx=0x7f060048;
-        public static final int imageTimeLimit=0x7f06004a;
-        public static final int imageView1=0x7f06004e;
-        public static final int infoButton=0x7f060057;
+        public static final int imageCountLimit=0x7f06004d;
+        public static final int imageEx=0x7f06004c;
+        public static final int imageTimeLimit=0x7f06004e;
+        public static final int imageView1=0x7f060052;
+        public static final int infoButton=0x7f06005b;
         public static final int listMode=0x7f060001;
         public static final int list_item=0x7f060029;
-        public static final int max_value=0x7f060046;
+        public static final int max_value=0x7f06004a;
+        public static final int menuAdd=0x7f060067;
+        public static final int menuInfo=0x7f060068;
         public static final int middle=0x7f060012;
-        public static final int min_value=0x7f060045;
-        public static final int navigation_drawer=0x7f060042;
+        public static final int min_value=0x7f060049;
+        public static final int navigation_drawer=0x7f060046;
         public static final int never=0x7f060009;
-        public static final int next_button=0x7f060060;
+        public static final int next_button=0x7f060065;
         public static final int none=0x7f060010;
         public static final int normal=0x7f060000;
+        public static final int numberPicker1=0x7f060061;
         public static final int progress_circular=0x7f060018;
         public static final int progress_horizontal=0x7f060019;
         public static final int radio=0x7f06002f;
-        public static final int resetButton=0x7f060055;
+        public static final int resetButton=0x7f060059;
         public static final int search_badge=0x7f060032;
         public static final int search_bar=0x7f060031;
         public static final int search_button=0x7f060033;
@@ -1232,27 +1241,28 @@ containing a value of this type.
         public static final int search_plate=0x7f060036;
         public static final int search_src_text=0x7f060037;
         public static final int search_voice_btn=0x7f06003b;
-        public static final int section_label=0x7f060052;
-        public static final int seek_bar=0x7f060044;
+        public static final int section_label=0x7f060056;
+        public static final int seek_bar=0x7f060048;
         public static final int shortcut=0x7f06002e;
-        public static final int shotsList=0x7f06005c;
+        public static final int shotsList=0x7f060060;
         public static final int showCustom=0x7f060007;
         public static final int showHome=0x7f060004;
         public static final int showTitle=0x7f060006;
-        public static final int skip_button=0x7f06005f;
-        public static final int spinnerType=0x7f06003f;
+        public static final int skip_button=0x7f060064;
         public static final int split_action_bar=0x7f06001e;
-        public static final int stopwatch=0x7f060054;
+        public static final int stopwatch=0x7f060058;
         public static final int submit_area=0x7f060039;
         public static final int tabMode=0x7f060002;
-        public static final int textExDescription=0x7f06004c;
-        public static final int textExTitle=0x7f06004b;
+        public static final int textCountLimit=0x7f060041;
+        public static final int textExDescription=0x7f060050;
+        public static final int textExTitle=0x7f06004f;
+        public static final int textTimeLimit=0x7f060044;
         public static final int title=0x7f06002b;
         public static final int top_action_bar=0x7f060020;
         public static final int up=0x7f060021;
         public static final int useLogo=0x7f060003;
         public static final int withText=0x7f06000c;
-        public static final int workButton=0x7f060058;
+        public static final int workButton=0x7f06005c;
     }
     public static final class integer {
         /**  The maximum number of action buttons that should be permitted within
@@ -1316,16 +1326,18 @@ containing a value of this type.
         public static final int fragment_navigation=0x7f030020;
         public static final int fragment_navigation_drawer=0x7f030021;
         public static final int fragment_shot=0x7f030022;
-        public static final int preference_list_fragment=0x7f030023;
-        public static final int shot_item=0x7f030024;
-        public static final int support_simple_spinner_dropdown_item=0x7f030025;
+        public static final int numberpicker=0x7f030023;
+        public static final int preference_list_fragment=0x7f030024;
+        public static final int shot_item=0x7f030025;
+        public static final int support_simple_spinner_dropdown_item=0x7f030026;
     }
     public static final class menu {
         public static final int edit_ex=0x7f0e0000;
-        public static final int global=0x7f0e0001;
-        public static final int main=0x7f0e0002;
-        public static final int navigation=0x7f0e0003;
-        public static final int shot=0x7f0e0004;
+        public static final int fragment_ex_menu=0x7f0e0001;
+        public static final int global=0x7f0e0002;
+        public static final int main=0x7f0e0003;
+        public static final int navigation=0x7f0e0004;
+        public static final int shot=0x7f0e0005;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1380,16 +1392,18 @@ containing a value of this type.
         public static final int def_shottime=0x7f0b0020;
         public static final int def_time=0x7f0b0021;
         /**  Default 
+ Default 
          */
         public static final int def_time_val=0x7f0b001e;
         public static final int hello_world=0x7f0b0011;
-        public static final int key_MicSensVal=0x7f0b003c;
-        public static final int key_RM=0x7f0b003a;
-        public static final int key_method=0x7f0b003d;
+        public static final int key_MicSensVal=0x7f0b0042;
+        public static final int key_RM=0x7f0b0040;
+        public static final int key_method=0x7f0b0043;
         /**  Preference keys 
+ Preference keys 
          */
-        public static final int key_sample=0x7f0b0039;
-        public static final int key_useMicSensVal=0x7f0b003b;
+        public static final int key_sample=0x7f0b003f;
+        public static final int key_useMicSensVal=0x7f0b0041;
         public static final int levelfiltr=0x7f0b001a;
         public static final int method_summary=0x7f0b001c;
         public static final int micvalsens_summary=0x7f0b001d;
@@ -1397,39 +1411,49 @@ containing a value of this type.
         public static final int navigation_drawer_open=0x7f0b0013;
         public static final int next_button_label=0x7f0b000e;
         /**  Summary 
+ Summary 
          */
         public static final int sample_summary=0x7f0b001b;
         /**  Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] 
          */
         public static final int skip_button_label=0x7f0b000f;
         public static final int sound_recording=0x7f0b0018;
-        public static final int text_description=0x7f0b002a;
-        public static final int text_name=0x7f0b0028;
-        public static final int text_number=0x7f0b0026;
-        public static final int text_reset=0x7f0b0024;
-        public static final int text_split=0x7f0b0027;
         /**  Text_ 
          */
-        public static final int text_start=0x7f0b0022;
-        public static final int text_stop=0x7f0b0023;
-        public static final int text_time=0x7f0b0025;
-        public static final int text_timelimit=0x7f0b002b;
-        public static final int text_title=0x7f0b0029;
-        public static final int title_Method=0x7f0b0037;
-        public static final int title_activity_edit_ex=0x7f0b0034;
-        public static final int title_activity_navigation=0x7f0b002e;
-        public static final int title_main=0x7f0b0036;
-        public static final int title_method=0x7f0b0038;
-        public static final int title_sample=0x7f0b002d;
-        public static final int title_section1=0x7f0b002f;
-        public static final int title_section2=0x7f0b0030;
-        public static final int title_section3=0x7f0b0031;
-        public static final int title_section4=0x7f0b0032;
-        public static final int title_section5=0x7f0b0033;
-        /**  Title 
+        public static final int text_add=0x7f0b0022;
+        public static final int text_cancel=0x7f0b0024;
+        public static final int text_countLimit=0x7f0b0026;
+        public static final int text_description=0x7f0b0030;
+        public static final int text_info=0x7f0b0027;
+        public static final int text_name=0x7f0b002e;
+        public static final int text_number=0x7f0b002c;
+        public static final int text_ok=0x7f0b0023;
+        public static final int text_reset=0x7f0b002a;
+        public static final int text_shotsCount=0x7f0b0025;
+        public static final int text_split=0x7f0b002d;
+        /**  Text_ 
          */
-        public static final int title_settings_sound=0x7f0b002c;
-        public static final int title_useMS=0x7f0b0035;
+        public static final int text_start=0x7f0b0028;
+        public static final int text_stop=0x7f0b0029;
+        public static final int text_time=0x7f0b002b;
+        public static final int text_timelimit=0x7f0b0031;
+        public static final int text_title=0x7f0b002f;
+        public static final int title_Method=0x7f0b003d;
+        public static final int title_activity_edit_ex=0x7f0b003a;
+        public static final int title_activity_navigation=0x7f0b0034;
+        public static final int title_main=0x7f0b003c;
+        public static final int title_method=0x7f0b003e;
+        public static final int title_sample=0x7f0b0033;
+        public static final int title_section1=0x7f0b0035;
+        public static final int title_section2=0x7f0b0036;
+        public static final int title_section3=0x7f0b0037;
+        public static final int title_section4=0x7f0b0038;
+        public static final int title_section5=0x7f0b0039;
+        /**  Title 
+ Title 
+         */
+        public static final int title_settings_sound=0x7f0b0032;
+        public static final int title_useMS=0x7f0b003b;
         public static final int todo=0x7f0b0019;
     }
     public static final class style {

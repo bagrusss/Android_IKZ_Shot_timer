@@ -26,6 +26,12 @@
     <string name="def_time">11.53</string>
 
     <!-- Text_ -->
+    <string name="text_add">Add</string>
+    <string name="text_ok">OK</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_shotsCount">Shots count</string>
+    <string name="text_countLimit">Count Limit</string>
+    <string name="text_info">Info</string>
     <string name="text_start">START</string>
     <string name="text_stop">STOP</string>
     <string name="text_reset">RESET</string>
@@ -34,7 +40,7 @@
     <string name="text_split">Split</string>
     <string name="text_name">Name</string>
     <string name="text_title">Title</string>
-    <string name="text_description">Some example of description for exercise Some example of description for exercise\nSome example of description for exercise</string>
+    <string name="text_description">Description</string>
     <string name="text_timelimit">Time Limit</string>
 
     <!-- Title -->
@@ -61,9 +67,9 @@
 
     <!-- Arrays -->
     <string-array name="Ex">
-        <item>First shot</item>
-        <item>Infinity</item>
-        <item>Interval</item>
+        <item>Бесконечный</item>
+        <item>Первый выстрел</item>
+        <item>Интервал</item>
     </string-array>
     <string-array name="SampleEntries">
         <item>44100</item>

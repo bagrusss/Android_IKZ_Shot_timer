@@ -75,7 +75,6 @@ public class ExAdapter extends BaseAdapter {
 	private class ViewHolder {
 		ImageView img, hasCount, hasTimeLimit;
 		TextView title, desc;
-
 	}
 
 }
