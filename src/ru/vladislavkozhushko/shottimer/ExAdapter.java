@@ -36,7 +36,8 @@ public class ExAdapter extends BaseAdapter {
 	public long getItemId(int position) {
 		return position;
 	}
-
+	private int max_count, timelim;
+	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
@@ -45,36 +46,44 @@ public class ExAdapter extends BaseAdapter {
 			convertView = mLayoutInflater.inflate(R.layout.ex_item, parent,
 					false);
 			holder.img = (ImageView) convertView.findViewById(R.id.imageEx);
-			holder.hasCount = (ImageView) convertView
-					.findViewById(R.id.imageCountLimit);
-			holder.hasTimeLimit = (ImageView) convertView
-					.findViewById(R.id.imageTimeLimit);
 			holder.title = (TextView) convertView
 					.findViewById(R.id.textExTitle);
 			holder.desc = (TextView) convertView
 					.findViewById(R.id.textExDescription);
+			holder.maxcount=(TextView) convertView.findViewById(R.id.textCountLimitIt);
+			holder.timelim=(TextView) convertView.findViewById(R.id.textTimeLimitIt);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		Ex ex = mExList.get(position);
-		holder.img.setImageResource(ex.getmImageId());
-		if (ex.ismHaveMaxCount())
-			holder.hasCount.setImageResource(R.drawable.ic_warn);
-		else
-			holder.hasCount.setImageDrawable(null);
-		if (ex.ismHaveTimeLimit())
-			holder.hasTimeLimit.setImageResource(R.drawable.ic_timelimit);
-		else
-			holder.hasTimeLimit.setImageDrawable(null);
-		holder.title.setText(ex.getmTitle());
-		holder.desc.setText(ex.getmDescriptin());
+		holder.img.setImageResource(ex.getImageId());
+		max_count=ex.MaxCount();
+		if (max_count>0){
+			holder.maxcount.setText(String.valueOf(max_count));
+			holder.maxcount.setVisibility(View.VISIBLE);
+		}
+		else {
+			holder.maxcount.setVisibility(View.GONE);
+		}
+		timelim=ex.TimeLimit();
+		if (timelim>0){
+			holder.timelim.setText(String.valueOf(timelim/100));
+			holder.timelim.append(".");
+			holder.timelim.append(String.valueOf(timelim%100));
+			holder.timelim.setVisibility(View.VISIBLE);
+		}			
+		else{
+			holder.timelim.setVisibility(View.GONE);
+		}
+		holder.title.setText(ex.getTitle());
+		holder.desc.setText(ex.getDescriptin());
 		return convertView;
 	}
 
 	private class ViewHolder {
-		ImageView img, hasCount, hasTimeLimit;
-		TextView title, desc;
+		ImageView img;
+		TextView title, desc,maxcount,timelim;
 	}
 
 }

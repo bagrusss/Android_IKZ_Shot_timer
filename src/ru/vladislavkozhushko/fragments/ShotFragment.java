@@ -13,6 +13,8 @@ import ru.vladislavkozhushko.shottimer.ShotListAdapter;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -37,6 +39,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	private ListView mListView;
 	private ShotListAdapter mShotListAdapter;
 	private List<Shot> mShots;
+	private MediaPlayer mMediaPlayer;
 
 	private byte state = 0;
 	private Timer mTimer;
@@ -59,6 +62,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	private void Stop() {
 		mStopWatch.suspend();
 		mTimer.cancel();
+		mTimer = null;
 		state = 1;
 		if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 			mWorkButton.setBackgroundDrawable(getActivity().getResources()
@@ -70,18 +74,23 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mWorkButton.setText(getActivity().getString(R.string.text_start));
 		mSpinner.setEnabled(true);
 		mResetButton.setEnabled(true);
-
 	}
 
-	private void Start() {
+	private void Start() {		
 		if (mStopWatch.isStarted())
 			mStopWatch.resume();
-		else
-			mStopWatch.start();
-		if (mShots == null) {
-			mShots = new LinkedList<>();
+		else {
+			mWorkButton.setEnabled(false);
+			mMediaPlayer.start();
+			mMediaPlayer.setOnCompletionListener(new OnCompletionListener() {
+				@Override
+				public void onCompletion(MediaPlayer mp) {
+					mStopWatch.start();
+					mWorkButton.setEnabled(true);
+				}
+			});
 		}
-		
+		mTimer = new Timer();
 		mTimer.schedule(new TimerTask() {
 			@Override
 			public void run() {
@@ -98,7 +107,6 @@ public class ShotFragment extends Fragment implements OnClickListener {
 			mWorkButton.setBackground(getActivity().getResources().getDrawable(
 					R.drawable.red_btn_selector));
 		}
-
 		mWorkButton.setText(getActivity().getString(R.string.text_stop));
 	}
 
@@ -109,6 +117,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mStopWatch = new StopWatch();
 		mTimer = new Timer();
 		mShots = new LinkedList<Shot>();
+		mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.ex);
 		mShots.add(new Shot(1, "00.00", "01.03"));
 		mShots.add(new Shot(2, "01.00", "02.03"));
 		mShots.add(new Shot(3, "00.56", "02.59"));
@@ -148,10 +157,10 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		mTimer.cancel();
-		mTimer=null;
+		mTimer = null;
 		mShots = null;
-		//mStopWatch = null;
+		mMediaPlayer=null;
+		// mStopWatch = null;
 	}
 
 	@Override

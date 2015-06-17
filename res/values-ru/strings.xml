@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Shot Timer (IKZ)</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Настройки</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Пример действия</string>
     <string name="about_developer">© Кожушко Владислав\n\nИУ6&#8211;83</string>
     <string name="about_app">Приложение разработано в рамках бакалаврской квалификационной работы\n</string>
     <string name="sound_recording">Запись звука</string>
-    <string name="todo">TODO</string>
     <string name="levelfiltr">Фильтрация уровней</string>
 
     <!-- Summary -->
-
     <string name="sample_summary">Частота дескритизации в Гц</string>
     <string name="method_summary">Метод распознавания</string>
     <string name="micvalsens_summary">Минимальное значение громкости в дБ</string>
@@ -29,13 +23,23 @@
     <string name="text_start">СТАРТ</string>
     <string name="text_stop">СТОП</string>
     <string name="text_reset">СБРОС</string>
+    <!--
     <string name="text_time">Time</string>
     <string name="text_number">#</string>
     <string name="text_split">Split</string>
+    -->
     <string name="text_name">Название</string>
-    <string name="text_title">Title</string>
+    <string name="text_title">Заголовок</string>
     <string name="text_description">Описание</string>
     <string name="text_timelimit">Лимит времени</string>
+    <string name="text_add">Сохранить</string>
+    <string name="text_count_limit">Количество выстрелов в упражнении ограничено</string>
+    <string name="text_time_limit">Время выполнения упражнения ограничено</string>
+    <string name="text_ok">OK</string>
+    <string name="text_cancel">Отмена</string>
+    <string name="text_shotsCount">Shots count</string>
+    <string name="text_countLimit">Count Limit</string>
+    <string name="text_info">Информация</string>
 
     <!-- Title -->
     <string name="title_settings_sound">Запись звука</string>
@@ -52,32 +56,15 @@
     <string name="title_Method">Метод</string>
     <string name="title_method">Метод распознавания</string>
 
-    <!-- Preference keys -->
-    <string name="key_sample">key_sample</string>
-    <string name="key_RM">key_RM</string>
-    <string name="key_useMicSensVal">key_MicSens</string>
-    <string name="key_MicSensVal">key_MicSensVal</string>
-    <string name="key_method">key_Method</string>
-
     <!-- Arrays -->
     <string-array name="Ex">
         <item>Infinity</item>
         <item>First shot</item>
         <item>Interval</item>
     </string-array>
-    <string-array name="SampleEntries">
-        <item>44100</item>
-        <item>22050</item>
-        <item>16000</item>
-        <item>8000</item>
-    </string-array>
     <string-array name="Method">
         <item>Фильтрация уровней</item>
         <item>НС Кохонена</item>
-    </string-array>
-    <string-array name="MethodValues">
-        <item>0</item>
-        <item>1</item>
     </string-array>
 
 </resources>

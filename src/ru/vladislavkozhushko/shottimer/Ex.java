@@ -5,44 +5,44 @@ public class Ex {
 	private int mImageId;
 	private String mTitle;
 	private String mDescriptin;
-	private boolean mHaveMaxCount;
-	private boolean mHaveTimeLimit;
-	public Ex(int img, String title, String desc, boolean hasmc, boolean hastl) {
+	private int mMaxCount=-1;
+	private int mTimeLimit=-1;
+	public Ex(int img, String title, String desc, int count, int timelimit_ms) {
 		mImageId=img;
 		mTitle=title;
 		mDescriptin=desc;
-		mHaveMaxCount=hasmc;
-		mHaveTimeLimit=hastl;
+		mMaxCount=count;
+		mTimeLimit=timelimit_ms;
 	}
-	public int getmImageId() {
+	public int getImageId() {
 		return mImageId;
 	}
-	public String getmTitle() {
+	public String getTitle() {
 		return mTitle;
 	}
-	public String getmDescriptin() {
+	public String getDescriptin() {
 		return mDescriptin;
 	}
-	public boolean ismHaveMaxCount() {
-		return mHaveMaxCount;
+	public int MaxCount() {
+		return mMaxCount;
 	}
-	public boolean ismHaveTimeLimit() {
-		return mHaveTimeLimit;
+	public int TimeLimit() {
+		return mTimeLimit;
 	}
-	public void setmImageId(int mImageId) {
+	public void setImageId(int mImageId) {
 		this.mImageId = mImageId;
 	}
-	public void setmTitle(String mTitle) {
+	public void setTitle(String mTitle) {
 		this.mTitle = mTitle;
 	}
 	public void setmDescriptin(String mDescriptin) {
 		this.mDescriptin = mDescriptin;
 	}
-	public void setmHaveMaxCount(boolean mHaveMaxCount) {
-		this.mHaveMaxCount = mHaveMaxCount;
+	public void setMaxCount(int mHaveMaxCount) {
+		this.mMaxCount = mHaveMaxCount;
 	}
-	public void setmHaveTimeLimit(boolean mHaveTimeLimit) {
-		this.mHaveTimeLimit = mHaveTimeLimit;
+	public void setTimeLimit(int mHaveTimeLimit) {
+		this.mTimeLimit = mHaveTimeLimit;
 	}
 
 }

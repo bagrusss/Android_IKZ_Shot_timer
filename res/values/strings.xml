@@ -27,6 +27,8 @@
 
     <!-- Text_ -->
     <string name="text_add">Add</string>
+     <string name="text_count_limit">The exercise has limit for count of shots</string>
+     <string name="text_time_limit">The exercise has time limit for shoting</string>
     <string name="text_ok">OK</string>
     <string name="text_cancel">Cancel</string>
     <string name="text_shotsCount">Shots count</string>
@@ -42,6 +44,7 @@
     <string name="text_title">Title</string>
     <string name="text_description">Description</string>
     <string name="text_timelimit">Time Limit</string>
+     <string name="text_exercises">Exercises</string>
 
     <!-- Title -->
     <string name="title_settings_sound">Recording</string>
