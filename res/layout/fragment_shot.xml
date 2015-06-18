@@ -56,7 +56,10 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/todo"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_dialog_info" />
+            android:src="@drawable/ic_info"
+            android:background="@android:color/transparent"
+            />
+        <!-- android:src="@android:drawable/ic_dialog_info"  -->
     </LinearLayout>
 
     <Button

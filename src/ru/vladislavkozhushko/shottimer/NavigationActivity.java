@@ -11,7 +11,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,16 +21,9 @@ import android.widget.TextView;
 public class NavigationActivity extends ActionBarActivity implements
 		NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-	/**
-	 * Fragment managing the behaviors, interactions and presentation of the
-	 * navigation drawer.
-	 */
+
 	private NavigationDrawerFragment mNavigationDrawerFragment;
 
-	/**
-	 * Used to store the last screen title. For use in
-	 * {@link #restoreActionBar()}.
-	 */
 	private CharSequence mTitle;
 
 	@Override
@@ -87,7 +79,7 @@ public class NavigationActivity extends ActionBarActivity implements
 					.replace(R.id.container, new AboutFragment()).commit();
 			break;
 		case 4:
-			finish();
+			onBackPressed();
 		}
 	}
 

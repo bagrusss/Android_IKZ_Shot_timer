@@ -40,7 +40,9 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	private ShotListAdapter mShotListAdapter;
 	private List<Shot> mShots;
 	private MediaPlayer mMediaPlayer;
-
+	
+	private boolean isStopWatchStarted=false; //костыль для Xiaomi
+	
 	private byte state = 0;
 	private Timer mTimer;
 	private StopWatch mStopWatch;
@@ -54,6 +56,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mShots.clear();
 		mShotListAdapter.notifyDataSetChanged();
 		mStopWatch.reset();
+		isStopWatchStarted=false;
 		state = 0;
 		mResetButton.setEnabled(false);
 		mStopWatchText.setText(getActivity().getString(R.string.def_time_val));
@@ -77,18 +80,11 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	}
 
 	private void Start() {		
-		if (mStopWatch.isStarted())
+		if (isStopWatchStarted) //mStopWatch.isStarted() по хорошему, с Xiaomi метод не найден?
 			mStopWatch.resume();
 		else {
 			mWorkButton.setEnabled(false);
 			mMediaPlayer.start();
-			mMediaPlayer.setOnCompletionListener(new OnCompletionListener() {
-				@Override
-				public void onCompletion(MediaPlayer mp) {
-					mStopWatch.start();
-					mWorkButton.setEnabled(true);
-				}
-			});
 		}
 		mTimer = new Timer();
 		mTimer.schedule(new TimerTask() {
@@ -109,15 +105,14 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		}
 		mWorkButton.setText(getActivity().getString(R.string.text_stop));
 	}
-
+	
 	@SuppressLint("HandlerLeak")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		mStopWatch = new StopWatch();
-		mTimer = new Timer();
+		mTimer = new Timer();	
 		mShots = new LinkedList<Shot>();
-		mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.ex);
 		mShots.add(new Shot(1, "00.00", "01.03"));
 		mShots.add(new Shot(2, "01.00", "02.03"));
 		mShots.add(new Shot(3, "00.56", "02.59"));
@@ -125,9 +120,8 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mHandler = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
-				if (msg.what == 0) {
-					mStopWatchText.setText(mStopWatch.toString().substring(3,
-							11));
+				if (msg.what == 0) {					
+					mStopWatchText.setText(mStopWatch.toString().substring(3,11));				
 				}
 			}
 		};
@@ -151,6 +145,15 @@ public class ShotFragment extends Fragment implements OnClickListener {
 		mResetButton = (Button) rootView.findViewById(R.id.resetButton);
 		mResetButton.setOnClickListener(this);
 		mSpinner = (Spinner) rootView.findViewById(R.id.EX_spinner);
+		mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.ex);
+		mMediaPlayer.setOnCompletionListener(new OnCompletionListener() {
+			@Override
+			public void onCompletion(MediaPlayer mp) {
+				mStopWatch.start();
+				isStopWatchStarted=true;
+				mWorkButton.setEnabled(true);
+			}
+		});
 		return rootView;
 	}
 
@@ -171,10 +174,10 @@ public class ShotFragment extends Fragment implements OnClickListener {
 				Start();
 			else
 				Stop();
-			break;
+			return;
 		case R.id.resetButton:
 			Reset();
-			break;
+			return;
 		case R.id.infoButton:
 
 		}

@@ -33,12 +33,12 @@
     <string name="text_description">Описание</string>
     <string name="text_timelimit">Лимит времени</string>
     <string name="text_add">Сохранить</string>
+    <string name="text_shotsCount">Shots count</string>
     <string name="text_count_limit">Количество выстрелов в упражнении ограничено</string>
     <string name="text_time_limit">Время выполнения упражнения ограничено</string>
     <string name="text_ok">OK</string>
     <string name="text_cancel">Отмена</string>
-    <string name="text_shotsCount">Shots count</string>
-    <string name="text_countLimit">Count Limit</string>
+    <string name="text_countLimit">Количество выстрелов</string>
     <string name="text_info">Информация</string>
 
     <!-- Title -->
