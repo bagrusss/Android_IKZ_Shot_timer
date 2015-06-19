@@ -80,7 +80,7 @@ public class ShotFragment extends Fragment implements OnClickListener {
 	}
 
 	private void Start() {		
-		if (isStopWatchStarted) //mStopWatch.isStarted() по хорошему, с Xiaomi метод не найден?
+		if (isStopWatchStarted) //mStopWatch.isStarted() но с Xiaomi метод не существует?
 			mStopWatch.resume();
 		else {
 			mWorkButton.setEnabled(false);

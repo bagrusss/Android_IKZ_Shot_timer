@@ -28,8 +28,8 @@
             android:persistent="true"
             android:summary="@string/micvalsens_summary"
             android:title="@string/title_useMS"
-            seek:maxValue="105"
-            seek:minValue="60" />
+            seek:maxValue="90"
+            seek:minValue="50" />
         <!-- ru.vladislavkozhushko.shottimer -->
 
     </PreferenceCategory>

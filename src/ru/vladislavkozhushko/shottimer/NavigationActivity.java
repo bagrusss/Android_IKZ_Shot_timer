@@ -117,12 +117,8 @@ public class NavigationActivity extends ActionBarActivity implements
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
+	public boolean onOptionsItemSelected(MenuItem item) {		
+
 		return super.onOptionsItemSelected(item);
 	}
 

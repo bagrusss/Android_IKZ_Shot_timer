@@ -997,12 +997,6 @@ containing a value of this type.
          (such as screen margins) for screens with more than 820dp of available width. This
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
- Default screen margins, per the Android Design guidelines. 
-
-         Example customization of dimensions originally defined in res/values/dimens.xml
-         (such as screen margins) for screens with more than 820dp of available width. This
-         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
-    
          */
         public static final int activity_horizontal_margin=0x7f0a0017;
         public static final int activity_vertical_margin=0x7f0a0018;
@@ -1182,7 +1176,6 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070016;
         public static final int action_menu_presenter=0x7f070017;
         public static final int action_mode_close_button=0x7f070024;
-        public static final int action_settings=0x7f070071;
         public static final int activity_chooser_view_content=0x7f070025;
         public static final int always=0x7f07000b;
         public static final int back_button=0x7f07006a;
@@ -1325,29 +1318,26 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_edit_ex=0x7f030018;
-        public static final int activity_main=0x7f030019;
-        public static final int activity_navigation=0x7f03001a;
-        public static final int dialog_slider=0x7f03001b;
-        public static final int ex_info_dialog=0x7f03001c;
-        public static final int ex_item=0x7f03001d;
-        public static final int fragment_about=0x7f03001e;
-        public static final int fragment_ex=0x7f03001f;
-        public static final int fragment_main=0x7f030020;
-        public static final int fragment_navigation=0x7f030021;
-        public static final int fragment_navigation_drawer=0x7f030022;
-        public static final int fragment_shot=0x7f030023;
-        public static final int numberpicker=0x7f030024;
-        public static final int preference_list_fragment=0x7f030025;
-        public static final int secmsecpicker=0x7f030026;
-        public static final int shot_item=0x7f030027;
-        public static final int support_simple_spinner_dropdown_item=0x7f030028;
+        public static final int activity_navigation=0x7f030019;
+        public static final int dialog_slider=0x7f03001a;
+        public static final int ex_info_dialog=0x7f03001b;
+        public static final int ex_item=0x7f03001c;
+        public static final int fragment_about=0x7f03001d;
+        public static final int fragment_ex=0x7f03001e;
+        public static final int fragment_navigation=0x7f03001f;
+        public static final int fragment_navigation_drawer=0x7f030020;
+        public static final int fragment_shot=0x7f030021;
+        public static final int numberpicker=0x7f030022;
+        public static final int preference_list_fragment=0x7f030023;
+        public static final int secmsecpicker=0x7f030024;
+        public static final int shot_item=0x7f030025;
+        public static final int support_simple_spinner_dropdown_item=0x7f030026;
     }
     public static final class menu {
         public static final int fragment_ex_menu=0x7f0f0000;
         public static final int global=0x7f0f0001;
-        public static final int main=0x7f0f0002;
-        public static final int navigation=0x7f0f0003;
-        public static final int shot=0x7f0f0004;
+        public static final int navigation=0x7f0f0002;
+        public static final int shot=0x7f0f0003;
     }
     public static final class raw {
         public static final int ex=0x7f060000;
@@ -1498,31 +1488,9 @@ containing a value of this type.
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f0d008b;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0d008c;

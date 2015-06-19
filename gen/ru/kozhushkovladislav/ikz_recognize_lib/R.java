@@ -159,8 +159,6 @@ public final class R {
 		public static final int abc_panel_menu_list_width = 0x7f0a000b;
 		public static final int abc_search_view_preferred_width = 0x7f0a000d;
 		public static final int abc_search_view_text_min_width = 0x7f0a000c;
-		public static final int activity_horizontal_margin = 0x7f0a0017;
-		public static final int activity_vertical_margin = 0x7f0a0018;
 		public static final int dialog_fixed_height_major = 0x7f0a0013;
 		public static final int dialog_fixed_height_minor = 0x7f0a0014;
 		public static final int dialog_fixed_width_major = 0x7f0a0011;
@@ -268,13 +266,11 @@ public final class R {
 		public static final int action_menu_divider = 0x7f070016;
 		public static final int action_menu_presenter = 0x7f070017;
 		public static final int action_mode_close_button = 0x7f070024;
-		public static final int action_settings = 0x7f070071;
 		public static final int activity_chooser_view_content = 0x7f070025;
 		public static final int always = 0x7f07000b;
 		public static final int beginning = 0x7f070011;
 		public static final int checkbox = 0x7f07002d;
 		public static final int collapseActionView = 0x7f07000d;
-		public static final int container = 0x7f07003c;
 		public static final int default_activity_button = 0x7f070028;
 		public static final int dialog = 0x7f07000e;
 		public static final int disableHome = 0x7f070008;
@@ -348,12 +344,7 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f030015;
 		public static final int abc_search_view = 0x7f030016;
 		public static final int abc_simple_decor = 0x7f030017;
-		public static final int activity_main = 0x7f030019;
-		public static final int fragment_main = 0x7f030020;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030028;
-	}
-	public static final class menu {
-		public static final int main = 0x7f0f0002;
+		public static final int support_simple_spinner_dropdown_item = 0x7f030026;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f0c0001;
@@ -374,8 +365,6 @@ public final class R {
 		public static final int hello_world = 0x7f0c0011;
 	}
 	public static final class style {
-		public static final int AppBaseTheme = 0x7f0d008b;
-		public static final int AppTheme = 0x7f0d008c;
 		public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog = 0x7f0d0063;
 		public static final int TextAppearance_AppCompat_Base_SearchResult = 0x7f0d006d;
 		public static final int TextAppearance_AppCompat_Base_SearchResult_Subtitle = 0x7f0d006f;
