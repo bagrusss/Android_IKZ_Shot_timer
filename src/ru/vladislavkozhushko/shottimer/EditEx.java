@@ -1,37 +1,75 @@
 package ru.vladislavkozhushko.shottimer;
 
+import java.util.Locale;
+
+import ru.vladislavkozhushko.data.ExSQLiteOpenHelper;
+import ru.vladislavkozhushko.fragments.ExFragment;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
-public class EditEx extends Activity implements OnCheckedChangeListener {
+public class EditEx extends Activity implements OnCheckedChangeListener,
+		android.view.View.OnClickListener {
 	private Dialog mContShotsDialog, mTimeLimitDialog;
 	private AlertDialog.Builder mBuilder;
+	private EditText mEditTitle, mEditDescroption;
 	private CheckBox mCountBox;
 	private CheckBox mTimeBox;
 	private TextView mConunTextView, mTimeLimitTextView;
 	private int mMaxcount = 0;
 	private long mTimeLimitMS = 0;
+	private Intent mIntent;
+	private ExSQLiteOpenHelper mDBHelper;
+	private Button mEditButton;
+	private boolean isModeEdit;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		mIntent = getIntent();
+		mDBHelper = ExSQLiteOpenHelper.getInstance(EditEx.this);
 		setContentView(R.layout.activity_edit_ex);
 		mTimeBox = (CheckBox) findViewById(R.id.checkBoxTimeLimit);
 		mCountBox = (CheckBox) findViewById(R.id.checkBoxCountLimit);
 		mTimeLimitTextView = (TextView) findViewById(R.id.textTimeLimit);
 		mConunTextView = (TextView) findViewById(R.id.textCountLimit);
+		mEditTitle = (EditText) findViewById(R.id.editExTitle);
+		mEditDescroption = (EditText) findViewById(R.id.editExDescription);
+		mEditButton = (Button) findViewById(R.id.buttonEdit);
+		mEditButton.setOnClickListener(this);
+		if (isModeEdit = mIntent.getBooleanExtra(ExFragment.MODE_EDIT, false)) {
+			mEditTitle.setText(mIntent.getStringExtra(ExFragment.TITLE));
+			mEditDescroption.setText(mIntent
+					.getStringExtra(ExFragment.DESCRIPTION));
+			mMaxcount = mIntent.getIntExtra(ExFragment.MAX_COUNT, 0);
+			if (mMaxcount > 0) {
+				mCountBox.setChecked(true);
+				mConunTextView.setText(String.valueOf(mMaxcount));
+				mConunTextView.setVisibility(View.VISIBLE);
+			}
+			mTimeLimitMS = mIntent.getLongExtra(ExFragment.TIME_LIM, 0);
+			if (mTimeLimitMS > 0) {
+				mTimeBox.setChecked(true);
+				mTimeLimitTextView.setText(String.format(Locale.US, "%.2f",
+						mTimeLimitMS / 1000.0));
+				mTimeLimitTextView.setVisibility(View.VISIBLE);
+			}
+		}
 		mTimeBox.setOnCheckedChangeListener(this);
 		mCountBox.setOnCheckedChangeListener(this);
 	}
@@ -133,6 +171,7 @@ public class EditEx extends Activity implements OnCheckedChangeListener {
 			} else {
 				mConunTextView.setVisibility(View.INVISIBLE);
 				mConunTextView.setText(null);
+				mTimeLimitMS = 0;
 				mCountBox.setChecked(false);
 			}
 			break;
@@ -142,10 +181,32 @@ public class EditEx extends Activity implements OnCheckedChangeListener {
 			} else {
 				mTimeLimitTextView.setVisibility(View.INVISIBLE);
 				mTimeLimitTextView.setText(null);
+				mMaxcount = 0;
 				mTimeBox.setChecked(false);
 			}
 			break;
+
 		}
+	}
+
+	boolean updateData(boolean isEdit) {
+		if (mEditTitle.length() == 0) {
+			mEditTitle.setError(getString(R.string.text_title_error));
+			return false;
+		} else
+			mEditTitle.setError(null);
+		// Запрос не большой, наверное, нет смысла создавать новый поток
+		if (isEdit) {
+			int id = mIntent.getIntExtra(ExFragment.ID, 0);
+			if (id == 0)
+				return false;
+			mDBHelper.updateEX(id, mEditTitle.getText().toString(),
+					mEditDescroption.getText().toString(), mTimeLimitMS,
+					mMaxcount, 2);
+		} else{
+			mDBHelper.insertEX(mEditTitle.getText().toString(), mEditDescroption.getText().toString(), mTimeLimitMS, mMaxcount, false);
+		}
+		return true;
 	}
 
 	@Override
@@ -156,6 +217,24 @@ public class EditEx extends Activity implements OnCheckedChangeListener {
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
+		}
+	}
+
+	@Override
+	public void onBackPressed() {
+		setResult(RESULT_CANCELED);
+		super.onBackPressed();
+	}
+
+	@Override
+	public void onClick(View v) {
+		if (v.getId() == R.id.buttonEdit) {
+				if (updateData(isModeEdit)) {
+					setResult(RESULT_OK);
+					Toast.makeText(getApplicationContext(),
+							android.R.string.ok, Toast.LENGTH_SHORT).show();
+					finish();
+				}
 		}
 	}
 }

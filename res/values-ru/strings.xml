@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Shot Timer (IKZ)</string>
     <string name="action_settings">Настройки</string>
-    <string name="action_example">Пример действия</string>
     <string name="about_developer">© Кожушко Владислав\n\nИУ6&#8211;83</string>
     <string name="about_app">Приложение разработано в рамках бакалаврской квалификационной работы\n</string>
     <string name="sound_recording">Запись звука</string>
@@ -20,19 +20,15 @@
     <string name="def_time">11.53</string>
 
     <!-- Text_ -->
+    <string name="text_add">Добавление</string>
     <string name="text_start">СТАРТ</string>
     <string name="text_stop">СТОП</string>
     <string name="text_reset">СБРОС</string>
-    <!--
-    <string name="text_time">Time</string>
-    <string name="text_number">#</string>
-    <string name="text_split">Split</string>
-    -->
     <string name="text_name">Название</string>
     <string name="text_title">Заголовок</string>
     <string name="text_description">Описание</string>
     <string name="text_timelimit">Лимит времени</string>
-    <string name="text_add">Сохранить</string>
+    <string name="text_save">Сохранить</string>
     <string name="text_shotsCount">Shots count</string>
     <string name="text_count_limit">Количество выстрелов в упражнении ограничено</string>
     <string name="text_time_limit">Время выполнения упражнения ограничено</string>
@@ -40,6 +36,10 @@
     <string name="text_cancel">Отмена</string>
     <string name="text_countLimit">Количество выстрелов</string>
     <string name="text_info">Информация</string>
+    <string name="text_exercises">Упражнения</string>
+    <string name="text_edit">Редактирование</string>
+     <string name="text_title_error">Короткое название</string>
+
 
     <!-- Title -->
     <string name="title_settings_sound">Запись звука</string>

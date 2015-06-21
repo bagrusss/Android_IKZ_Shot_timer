@@ -1180,7 +1180,7 @@ containing a value of this type.
         public static final int always=0x7f07000b;
         public static final int back_button=0x7f07006a;
         public static final int beginning=0x7f070011;
-        public static final int buttonAdd=0x7f070045;
+        public static final int buttonEdit=0x7f070045;
         public static final int button_bar=0x7f070069;
         public static final int checkBoxCountLimit=0x7f070040;
         public static final int checkBoxTimeLimit=0x7f070043;
@@ -1193,8 +1193,8 @@ containing a value of this type.
         public static final int disableHome=0x7f070008;
         public static final int drawer_layout=0x7f070046;
         public static final int dropdown=0x7f07000f;
-        public static final int editExName=0x7f07003d;
-        public static final int editText1=0x7f07003e;
+        public static final int editExDescription=0x7f07003e;
+        public static final int editExTitle=0x7f07003d;
         public static final int edit_query=0x7f070030;
         public static final int end=0x7f070013;
         public static final int expand_activities_button=0x7f070026;
@@ -1399,13 +1399,13 @@ containing a value of this type.
          */
         public static final int def_time_val=0x7f0c001e;
         public static final int hello_world=0x7f0c0011;
-        public static final int key_MicSensVal=0x7f0c0045;
-        public static final int key_RM=0x7f0c0043;
-        public static final int key_method=0x7f0c0046;
+        public static final int key_MicSensVal=0x7f0c0048;
+        public static final int key_RM=0x7f0c0046;
+        public static final int key_method=0x7f0c0049;
         /**  Preference keys 
          */
-        public static final int key_sample=0x7f0c0042;
-        public static final int key_useMicSensVal=0x7f0c0044;
+        public static final int key_sample=0x7f0c0045;
+        public static final int key_useMicSensVal=0x7f0c0047;
         public static final int levelfiltr=0x7f0c001a;
         public static final int method_summary=0x7f0c001c;
         public static final int micvalsens_summary=0x7f0c001d;
@@ -1421,50 +1421,46 @@ containing a value of this type.
         public static final int skip_button_label=0x7f0c000f;
         public static final int sound_recording=0x7f0c0018;
         /**  Text_ 
+ Text_ 
          */
         public static final int text_add=0x7f0c0022;
-        public static final int text_cancel=0x7f0c0026;
-        public static final int text_countLimit=0x7f0c0028;
-        public static final int text_count_limit=0x7f0c0023;
-        public static final int text_description=0x7f0c0032;
-        public static final int text_exercises=0x7f0c0034;
-        public static final int text_info=0x7f0c0029;
-        /** 
-    <string name="text_time">Time</string>
-    <string name="text_number">#</string>
-    <string name="text_split">Split</string>
-    
-         */
-        public static final int text_name=0x7f0c0030;
-        public static final int text_number=0x7f0c002e;
-        public static final int text_ok=0x7f0c0025;
-        public static final int text_reset=0x7f0c002c;
-        public static final int text_shotsCount=0x7f0c0027;
-        public static final int text_split=0x7f0c002f;
-        /**  Text_ 
-         */
-        public static final int text_start=0x7f0c002a;
-        public static final int text_stop=0x7f0c002b;
-        public static final int text_time=0x7f0c002d;
-        public static final int text_time_limit=0x7f0c0024;
-        public static final int text_timelimit=0x7f0c0033;
-        public static final int text_title=0x7f0c0031;
-        public static final int title_Method=0x7f0c0040;
-        public static final int title_activity_edit_ex=0x7f0c003d;
-        public static final int title_activity_navigation=0x7f0c0037;
-        public static final int title_main=0x7f0c003f;
-        public static final int title_method=0x7f0c0041;
-        public static final int title_sample=0x7f0c0036;
-        public static final int title_section1=0x7f0c0038;
-        public static final int title_section2=0x7f0c0039;
-        public static final int title_section3=0x7f0c003a;
-        public static final int title_section4=0x7f0c003b;
-        public static final int title_section5=0x7f0c003c;
+        public static final int text_cancel=0x7f0c0028;
+        public static final int text_countLimit=0x7f0c002a;
+        public static final int text_count_limit=0x7f0c0024;
+        public static final int text_description=0x7f0c0035;
+        public static final int text_edit=0x7f0c0034;
+        public static final int text_exercises=0x7f0c0037;
+        public static final int text_info=0x7f0c002b;
+        public static final int text_name=0x7f0c0032;
+        public static final int text_number=0x7f0c0030;
+        public static final int text_ok=0x7f0c0026;
+        public static final int text_reset=0x7f0c002e;
+        public static final int text_save=0x7f0c0023;
+        public static final int text_shotsCount=0x7f0c0029;
+        public static final int text_split=0x7f0c0031;
+        public static final int text_start=0x7f0c002c;
+        public static final int text_stop=0x7f0c002d;
+        public static final int text_time=0x7f0c002f;
+        public static final int text_time_limit=0x7f0c0025;
+        public static final int text_timelimit=0x7f0c0036;
+        public static final int text_title=0x7f0c0033;
+        public static final int text_title_error=0x7f0c0027;
+        public static final int title_Method=0x7f0c0043;
+        public static final int title_activity_edit_ex=0x7f0c0040;
+        public static final int title_activity_navigation=0x7f0c003a;
+        public static final int title_main=0x7f0c0042;
+        public static final int title_method=0x7f0c0044;
+        public static final int title_sample=0x7f0c0039;
+        public static final int title_section1=0x7f0c003b;
+        public static final int title_section2=0x7f0c003c;
+        public static final int title_section3=0x7f0c003d;
+        public static final int title_section4=0x7f0c003e;
+        public static final int title_section5=0x7f0c003f;
         /**  Title 
  Title 
          */
-        public static final int title_settings_sound=0x7f0c0035;
-        public static final int title_useMS=0x7f0c003e;
+        public static final int title_settings_sound=0x7f0c0038;
+        public static final int title_useMS=0x7f0c0041;
         public static final int todo=0x7f0c0019;
     }
     public static final class style {
