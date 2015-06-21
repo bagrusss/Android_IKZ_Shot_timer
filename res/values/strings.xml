@@ -28,6 +28,7 @@
     <!-- Text_ -->
     <string name="text_add">Add</string>
     <string name="text_save">Save</string>
+    <string name="text_Menu">Menu</string>
     <string name="text_count_limit">The exercise has limit for count of shots</string>
     <string name="text_time_limit">The exercise has time limit for shoting</string>
     <string name="text_ok">OK</string>
@@ -45,9 +46,12 @@
     <string name="text_name">Name</string>
     <string name="text_title">Title</string>
     <string name="text_edit">Edit</string>
+    <string name="text_delete">Delete</string>
     <string name="text_description">Description</string>
     <string name="text_timelimit">Time Limit</string>
     <string name="text_exercises">Exercises</string>
+    <string name="text_no">no</string>
+    <string name="text_yes">yes</string>
 
     <!-- Title -->
     <string name="title_settings_sound">Recording</string>

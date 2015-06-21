@@ -137,6 +137,19 @@ public class ExSQLiteOpenHelper extends SQLiteOpenHelper {
 		return res;
 	}
 	
+	public synchronized int deleteExByID(long id){
+		int res=0;
+		SQLiteDatabase db=getWritableDatabase();
+		try{
+			db.beginTransaction();
+			Log.i(DB_TAG, String.valueOf(res=db.delete(TABLE_EX, "_ID=?", new String[]{String.valueOf(id)})));
+			db.setTransactionSuccessful();
+		} finally{
+			db.endTransaction();
+		}
+		return res;
+	}
+	
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {		
 

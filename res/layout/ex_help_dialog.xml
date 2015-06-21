@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textViewCountInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_warn"
+        android:gravity="center_vertical"
+        android:text="@string/text_count_limit" />
+
+    <TextView
+        android:id="@+id/textViewTimeLiminInfo"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_timelimit"
+        android:gravity="center_vertical"
+        android:text="@string/text_time_limit" />
+
+</LinearLayout>

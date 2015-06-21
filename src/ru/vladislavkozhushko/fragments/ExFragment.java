@@ -25,6 +25,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
@@ -35,6 +36,7 @@ public class ExFragment extends Fragment implements LoaderCallbacks<Cursor>, OnI
 
 	private ListView mExListView;
 	private CursorAdapter mCursorAdapter;
+	private ExSQLiteOpenHelper mDBHelper;
 	public static final String ACTIVITY_TITLE="ActTit",
 			TITLE="Tit",
 			DESCRIPTION="Decr",
@@ -58,6 +60,7 @@ public class ExFragment extends Fragment implements LoaderCallbacks<Cursor>, OnI
 			Bundle savedInstanceState) {
 		View rootView = inflater
 				.inflate(R.layout.fragment_ex, container, false);
+		mDBHelper=ExSQLiteOpenHelper.getInstance(getActivity());
 		mCursorAdapter=new CursorAdapter(getActivity(), null) {
 			
 			@Override
@@ -103,6 +106,8 @@ public class ExFragment extends Fragment implements LoaderCallbacks<Cursor>, OnI
 		mExListView=(ListView) rootView.findViewById(R.id.ExListView);
 		mExListView.setAdapter(mCursorAdapter);
 		mExListView.setOnItemClickListener(this);
+		mExListView.setOnCreateContextMenuListener(this);
+		registerForContextMenu(mExListView);
 		getLoaderManager().initLoader(0, null, this);
 		return rootView;
 	}
@@ -132,21 +137,32 @@ public class ExFragment extends Fragment implements LoaderCallbacks<Cursor>, OnI
 			return true;
 			default:
 				return super.onOptionsItemSelected(item);
-		}
-		
+		}		
 	}
 	
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
-		// TODO Auto-generated method stub
+		menu.setHeaderTitle(R.string.text_Menu);
+		menu.add(0, 11, 0, R.string.text_delete);
 		super.onCreateContextMenu(menu, v, menuInfo);
 	}
 	
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		AdapterContextMenuInfo info=(AdapterContextMenuInfo) item.getMenuInfo();
+		switch (item.getItemId()){
+		case 11:
+			mDBHelper.deleteExByID(info.id);
+			getLoaderManager().getLoader(0).forceLoad();
+			break;
+		}
+		return super.onContextItemSelected(item);		
+	}
 	
 	
 	void showInfoDialog(){		
-		View v = getActivity().getLayoutInflater().inflate(R.layout.ex_info_dialog, null);
+		View v = getActivity().getLayoutInflater().inflate(R.layout.ex_help_dialog, null);
 		AlertDialog.Builder builder=new Builder(getActivity()).setTitle(R.string.text_info).setView(v).setIcon(R.drawable.ic_info);
 		builder.create().show();				
 	}
@@ -182,6 +198,7 @@ public class ExFragment extends Fragment implements LoaderCallbacks<Cursor>, OnI
 		intent.putExtra(ID, holder.id);
 		startEditExActivity(intent);
 	}
+	
 	
 	void startEditExActivity(Intent intent){
 		startActivityForResult(intent, 0);

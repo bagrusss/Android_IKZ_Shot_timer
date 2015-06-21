@@ -16,11 +16,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.Toast;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EditEx extends Activity implements OnCheckedChangeListener,
 		android.view.View.OnClickListener {
@@ -81,6 +81,7 @@ public class EditEx extends Activity implements OnCheckedChangeListener,
 					.findViewById(R.id.numberPicker1);
 			np.setMaxValue(100);
 			np.setMinValue(1);
+			np.setValue(5);
 			np.setSelected(false);
 			mBuilder = new AlertDialog.Builder(this)
 					.setView(v)
@@ -119,11 +120,13 @@ public class EditEx extends Activity implements OnCheckedChangeListener,
 					.findViewById(R.id.seconsPicker);// пикер секунд
 			sec_np.setMaxValue(60);
 			sec_np.setValue(2);
+			sec_np.setValue((int)(mTimeLimitMS%1000));
 			sec_np.setMinValue(1);
 			sec_np.setSelected(false);
 			final NumberPicker msec_np = (NumberPicker) v
 					.findViewById(R.id.msecondsPicker); // пикер милисекунд
 			msec_np.setMaxValue(99);
+			msec_np.setValue((int)(mTimeLimitMS/1000));
 			msec_np.setMinValue(0);
 			msec_np.setSelected(false);
 			mBuilder = new AlertDialog.Builder(this)
@@ -133,13 +136,9 @@ public class EditEx extends Activity implements OnCheckedChangeListener,
 					.setPositiveButton(R.string.text_ok, new OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
-							mTimeLimitMS = sec_np.getValue() * 100
-									+ msec_np.getValue();
-							mTimeLimitTextView.setText(String.valueOf(sec_np
-									.getValue()));
-							mTimeLimitTextView.append(".");
-							mTimeLimitTextView.append(String.valueOf(msec_np
-									.getValue()));
+							mTimeLimitMS = sec_np.getValue() * 1000
+									+ msec_np.getValue()*10;
+							mTimeLimitTextView.setText(String.format(Locale.US, "%.2f", mTimeLimitMS/1000.0));
 							mTimeLimitTextView.setVisibility(View.VISIBLE);
 						}
 					})
@@ -171,7 +170,7 @@ public class EditEx extends Activity implements OnCheckedChangeListener,
 			} else {
 				mConunTextView.setVisibility(View.INVISIBLE);
 				mConunTextView.setText(null);
-				mTimeLimitMS = 0;
+				mMaxcount = 0;
 				mCountBox.setChecked(false);
 			}
 			break;
@@ -181,11 +180,10 @@ public class EditEx extends Activity implements OnCheckedChangeListener,
 			} else {
 				mTimeLimitTextView.setVisibility(View.INVISIBLE);
 				mTimeLimitTextView.setText(null);
-				mMaxcount = 0;
+				mTimeLimitMS = 0;				
 				mTimeBox.setChecked(false);
 			}
 			break;
-
 		}
 	}
 

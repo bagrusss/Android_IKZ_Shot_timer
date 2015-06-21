@@ -4,20 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textViewCountInfo"
+    <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_warn"
-        android:gravity="center_vertical"
-        android:text="@string/text_count_limit" />
+        layout="@layout/ex_help_dialog" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textDescriptionInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_timelimit"
-        android:gravity="center_vertical"
-        android:text="@string/text_time_limit" />
+        android:layout_marginLeft="15dp"
+        android:textSize="18sp"
+        android:text="@string/text_description" />
 
 </LinearLayout>
