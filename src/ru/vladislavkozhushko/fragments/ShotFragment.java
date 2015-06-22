@@ -144,9 +144,6 @@ public class ShotFragment extends Fragment implements OnClickListener,
 		mContext = getActivity();
 		mTimer = new Timer();
 		mShots = new LinkedList<Shot>();
-		mShots.add(new Shot(1, "00.00", "01.03"));
-		mShots.add(new Shot(2, "01.00", "02.03"));
-		mShots.add(new Shot(3, "00.56", "02.59"));
 		mShotListAdapter = new ShotListAdapter(mContext, mShots);
 		mHandler = new Handler() {
 			@Override
@@ -178,10 +175,9 @@ public class ShotFragment extends Fragment implements OnClickListener,
 		mWorkButton.setOnClickListener(this);
 		mResetButton = (Button) rootView.findViewById(R.id.resetButton);
 		mResetButton.setOnClickListener(this);
-
 		mSpinner = (Spinner) rootView.findViewById(R.id.EX_spinner);
 		mSpinnerAdapter = new CursorAdapter(mContext, null) {
-
+			
 			@Override
 			public View newView(Context context, Cursor c, ViewGroup parent) {
 				View v = LayoutInflater.from(context).inflate(
@@ -239,12 +235,13 @@ public class ShotFragment extends Fragment implements OnClickListener,
 		}
 		// mStopWatch = null;
 	}
-
+	
+	/*
 	@Override
 	public void onPause() {
 		// mMediaPlayer.release();
 		super.onPause();
-	}
+	}*/
 
 	@Override
 	public void onClick(View v) {
