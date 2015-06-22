@@ -29,6 +29,7 @@ public class IKZConfigurator {
 	private boolean mUseMicSens;
 	private double mMicSensDB;
 	private int mSample;
+	private int mMaxIZKCount;
 	//private int mAudioFormat=AudioFormat.ENCODING_PCM_16BIT;
 	//private int mChannel=AudioFormat.CHANNEL_IN_MONO;
 

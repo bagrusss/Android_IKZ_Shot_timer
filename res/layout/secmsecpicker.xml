@@ -5,18 +5,46 @@
     android:gravity="center_horizontal"
     android:orientation="horizontal" >
 
-    <NumberPicker
-        android:id="@+id/seconsPicker"
+    <LinearLayout
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textSec"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_sec" />
+
+        <NumberPicker
+            android:id="@+id/seconsPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="30dp"
         android:layout_height="wrap_content" />
-
-    <View
-        android:layout_width="20dp"
-        android:layout_height="0dp" />
-
-    <NumberPicker
-        android:id="@+id/msecondsPicker"
+	
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/textMSec"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_msec" />
+
+        <NumberPicker
+            android:id="@+id/msecondsPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -137,6 +137,21 @@ public class ExSQLiteOpenHelper extends SQLiteOpenHelper {
 		return res;
 	}
 	
+	public synchronized int updateFulfilmentEx(long id, boolean state){
+		ContentValues cv=new ContentValues();
+		cv.put(EX_SHOT_ACTIVATION, state);
+		SQLiteDatabase db=getWritableDatabase();
+		int res=0;
+		try{
+			db.beginTransaction();
+			Log.i(DB_TAG, String.valueOf(res=db.update(TABLE_EX, cv, "_ID=?", new String[]{String.valueOf(id)})));
+			db.setTransactionSuccessful();
+		} finally{
+			db.endTransaction();
+		}
+		return res;
+	}
+	
 	public synchronized int deleteExByID(long id){
 		int res=0;
 		SQLiteDatabase db=getWritableDatabase();

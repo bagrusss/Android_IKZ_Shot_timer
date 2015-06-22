@@ -28,6 +28,8 @@
     <!-- Text_ -->
     <string name="text_add">Add</string>
     <string name="text_save">Save</string>
+    <string name="text_sec">sec</string>
+    <string name="text_msec">ms</string>
     <string name="text_Menu">Menu</string>
     <string name="text_count_limit">The exercise has limit for count of shots</string>
     <string name="text_time_limit">The exercise has time limit for shoting</string>
@@ -52,6 +54,9 @@
     <string name="text_exercises">Exercises</string>
     <string name="text_no">no</string>
     <string name="text_yes">yes</string>
+    <string name="text_success">You have completed this exercise successfully!</string>
+    <string name="text_fail">You have failed this exercise!</string>
+     <string name="text_status">Status</string>
 
     <!-- Title -->
     <string name="title_settings_sound">Recording</string>

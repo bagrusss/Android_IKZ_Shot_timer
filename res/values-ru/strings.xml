@@ -24,12 +24,14 @@
     <string name="text_start">СТАРТ</string>
     <string name="text_stop">СТОП</string>
     <string name="text_reset">СБРОС</string>
+    <string name="text_sec">сек</string>
+    <string name="text_msec">мс</string>
     <string name="text_name">Название</string>
     <string name="text_title">Заголовок</string>
     <string name="text_description">Описание</string>
     <string name="text_timelimit">Лимит времени</string>
     <string name="text_save">Сохранить</string>
-    <string name="text_shotsCount">Количество выстрелов</string>
+    <string name="text_shotsCount">Лимит выстрелов</string>
     <string name="text_count_limit">Количество выстрелов в упражнении ограничено</string>
     <string name="text_time_limit">Время выполнения упражнения ограничено</string>
     <string name="text_ok">OK</string>
@@ -41,6 +43,9 @@
     <string name="text_title_error">Короткое название</string>
     <string name="text_no">нет</string>
     <string name="text_yes">да</string>
+    <string name="text_success">Вы успешно выполнили упражнение!</string>
+    <string name="text_fail">Вы не выполнили упражнение!</string>
+    <string name="text_status">Статус</string>
 
     <!-- Title -->
     <string name="title_settings_sound">Запись звука</string>

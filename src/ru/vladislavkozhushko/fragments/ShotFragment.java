@@ -40,6 +40,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -128,10 +129,11 @@ public class ShotFragment extends Fragment implements OnClickListener,
 	}
 
 	class SpinnerHolder {
-		String description, tit;
+		String description;
 		long timelim;
 		int maxCount;
 		TextView title;
+		boolean isSuccessful;
 	}
 
 	@SuppressLint("HandlerLeak")
@@ -201,7 +203,8 @@ public class ShotFragment extends Fragment implements OnClickListener,
 						.getColumnIndex(ExSQLiteOpenHelper.EX_SHOTS_COUNT));
 				holder.timelim = c.getLong(c
 						.getColumnIndex(ExSQLiteOpenHelper.EX_TIMELIMIT_MS));
-
+				holder.isSuccessful = c.getInt(c
+						.getColumnIndex(ExSQLiteOpenHelper.EX_SHOT_ACTIVATION)) > 0;
 			}
 		};
 		mSpinner.setAdapter(mSpinnerAdapter);
@@ -277,8 +280,9 @@ public class ShotFragment extends Fragment implements OnClickListener,
 
 	private StringBuilder mExTitle, mExDescription;
 	private int mMaxCount;
-	private long mTimeLim;
-	TextView mDesc, mTextCountLimit, mTextTimeLimit;
+	private long mTimeLim, mID;
+	private boolean isSuccessful;
+	private TextView mDesc, mTextCountLimit, mTextTimeLimit;
 
 	void ShotInfoAboutEx() {
 		View v;
@@ -319,6 +323,26 @@ public class ShotFragment extends Fragment implements OnClickListener,
 		mDialog.show();
 	}
 
+	void showExStatusDialog(boolean isSuccess) {
+		View v = LayoutInflater.from(mContext).inflate(
+				R.layout.ex_result_dialog, null);
+		TextView textMessage = (TextView) v.findViewById(R.id.textMessage);
+		ImageView iv = (ImageView) v.findViewById(R.id.imageStatus);
+		if (isSuccessful) {
+			textMessage.setText(R.string.text_success);
+			iv.setImageResource(R.drawable.ic_galka);
+		} else {
+			textMessage.setText(R.string.text_fail);
+			iv.setImageResource(R.drawable.ic_galka);
+		}
+		// обновить статус упражнения, если оно не выполнялось ранее
+		if (!isSuccessful && isSuccess) {
+			ExSQLiteOpenHelper dbhelper = ExSQLiteOpenHelper
+					.getInstance(mContext);
+			dbhelper.updateFulfilmentEx(mID, true);
+		}
+	}
+
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View v, int position,
 			long id) {
@@ -334,6 +358,8 @@ public class ShotFragment extends Fragment implements OnClickListener,
 		}
 		mMaxCount = holder.maxCount;
 		mTimeLim = holder.timelim;
+		isSuccessful = holder.isSuccessful;
+		mID = id;
 	}
 
 	@Override
